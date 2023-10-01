@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0f11fb3fab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="Logo.jpg" width="250" height="50" class="Logo">
+            <ul id="sidemenu">
+                <li><a href="homepg.html">Home</a></li>
+                <li><a href="aboutpg.html">About</a></li>
+                <li><a href="portfoliopg.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Abme2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="abme">
+                        I am a Computer Engineering undergraduate with a keen interest in the dynamic field of data science and graphic designing. My journey in the world of technology has been marked by creativity and a competitive spirit. While I may not have formal work experience yet, I embarked on a valuable internship that provided me with practical insights into the industry. Additionally, I've actively participated in numerous events, hackathons, and competitions, where I've had the chance to apply my skills, collaborate with peers, and solve real-world challenges.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages </span><br>Java <br>C <br>Python </li>
+                            <li><span>Hardware Decriptive Language</span><br>Verilog</li>
+                            <li><span>Web Development</span><br>HTML <br>CSS <br>Javascript</li>
+                            <li><span>Graphic Design</span><br>Canva <br>Adobe Express</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Internship</span><br>Intra-Institute IT Summer Internship</li>
+                            <li><span>Projects</span><br>Smart Plug <br>Students Database Management System <br>Graphic Designing</li>
+                            <li><span>Competitions</span><br>Accenture Innovation Challenge<br>Tata Imagination Challenge <br>QuantumX 24H Hackathon</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>BE- New Horizon College Of Engineering (9.48 cgpa) </li>
+                            <li><span>2021</span><br>XII- Narayana e-Techno School (92.4%)</li>
+                            <li><span>2019</span><br>X- Cambridge School (91.3%)</li>
+                        </ul>
+                        
+                    </div>
+                    <a href="S Resume2.pdf" download class="btnn btnn2">Resume</a>
+                </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sreevathsav</p>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+   
+       function opentab(tabname){
+           for(tablink of tablinks){
+               tablink.classList.remove("active-link");
+           }
+           for(tabcontent of tabcontents){
+               tabcontent.classList.remove("active-tab");
+           }
+           event.currentTarget.classList.add("active-link");
+           document.getElementById(tabname).classList.add("active-tab")
+       }
+    </script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu")
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+    
+</body>
+</html>

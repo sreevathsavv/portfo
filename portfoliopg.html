@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0f11fb3fab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="Logo.jpg" width="250" height="50" class="Logo">
+            <ul id="sidemenu">
+                <li><a href="homepg.html">Home</a></li>
+                <li><a href="aboutpg.html">About</a></li>
+                <li><a href="portfoliopg.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title ss">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <a href="https://github.com/sreevathsavv/bricks"><p class="portf" style="text-align: center"><i class="fa-solid fa-gamepad"></i></i></p></a>
+                    <p>Brick Breaker Game-GitHub </p>
+                    <p>(Developed using Java)</p>
+                </div>
+                <div class="work">
+                    <a href="Smart.pdf"><p class="portf" style="text-align: center"><i class="fa-solid fa-plug-circle-bolt"></i></p></a>
+                    <p>Smart Plug</p>
+                </div>
+                <div class="work">
+                    <a href="Graphic.pdf"><p class="portf" style="text-align: center"><i class="fa-solid fa-wand-magic-sparkles"></i></p></a>
+                    <p>Graphic Desinging</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sreevathsav</p>
+    </div>
+    <script>
+        var sidemeu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>
